@@ -1,164 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- === SEO & SOCIAL SHARING TAGS (REVISION 3) === -->
-    <title>Mansoor Ali Syed - The Modern Care Leader</title>
-    <meta name="description" content="An interactive infographic showcasing the skills and key achievements of Mansoor Ali Syed, a modern care leader fusing compassionate care with technology.">
-    
-    <!-- Open Graph / LinkedIn / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Mansoor Ali Syed - The Modern Care Leader">
-    <meta property="og:description" content="An interactive infographic showcasing the skills and key achievements of Mansoor Ali Syed, a modern care leader fusing compassionate care with technology.">
-    <meta property="og:image" content="https://placehold.co/1200x630/005F73/94D2BD?text=Mansoor+Ali+Syed\nModern+Care+Leader">
-    <!-- Note: For a real preview image, take a screenshot of the infographic, upload it, and replace the placehold.co link above. -->
-
-    <!-- === END REVISION === -->
-
+    <title>Mansoor Ali Syed | Care Leader & Tech Innovator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #001219;
+            color: #E0E0E0;
         }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
+        /* Color Variables */
+        :root {
+            --bg-dark: #001219;
+            --bg-medium: #005F73;
+            --accent-teal: #0A9396;
+            --accent-light-teal: #94D2BD;
+            --accent-gold: #E9D8A6;
+            --accent-orange: #EE9B00;
         }
-        @media (max-width: 768px) {
-            .chart-container {
-                height: 300px;
-            }
+        .bg-dark { background-color: var(--bg-dark); }
+        .bg-medium { background-color: var(--bg-medium); }
+        .text-light-teal { color: var(--accent-light-teal); }
+        .text-gold { color: var(--accent-gold); }
+        .text-orange { color: var(--accent-orange); }
+        .border-teal { border-color: var(--accent-teal); }
+        .bg-teal { background-color: var(--accent-teal); }
+        .bg-orange { background-color: var(--accent-orange); }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #0A9396;
-            border: 3px solid #E9D8A6;
+
+        /* Active Nav Link Styling */
+        .nav-link-active {
+            color: var(--accent-gold);
+            font-weight: 700;
         }
-        .flow-arrow {
-            color: #0A9396;
-            font-size: 2.5rem;
-            line-height: 1;
+        
+        /* Project Card Hover Effect */
+        .project-card, .cert-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        .chat-bubble-user {
-            background-color: #E9D8A6;
-            color: #001219;
+        .project-card:hover, .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
         }
-        .chat-bubble-ai {
-            background-color: #0A9396;
+
+        /* Form Styling */
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent-teal);
             color: #FFFFFF;
+            transition: background-color 0.3s, border-color 0.3s;
         }
-        .loading-dots div {
-            animation: bounce 1.4s infinite ease-in-out both;
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+            border-color: var(--accent-gold);
         }
-        .loading-dots .dot1 { animation-delay: -0.32s; }
-        .loading-dots .dot2 { animation-delay: -0.16s; }
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1.0); }
+        .form-input::placeholder {
+            color: rgba(224, 224, 224, 0.6);
         }
     </style>
 </head>
-<body class="bg-gray-100" style="background-color: #001219;">
+<body>
 
-    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
-
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-black text-white" style="color: #94D2BD;">Mansoor Ali Syed</h1>
-            <p class="text-xl md:text-2xl font-bold mt-2" style="color: #0A9396;">The Modern Care Leader</p>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto mt-4">Fusing 5+ years of compassionate care with an MBA and a passion for technology to drive efficiency, engagement, and CQC compliance in UK care homes.</p>
-        </header>
-
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
-                <p class="text-5xl mb-2">📊</p>
-                <h2 class="text-xl font-bold text-white mb-2">Digital Survey Rollout</h2>
-                <p class="text-4xl font-black" style="color: #E9D8A6;">+50%</p>
-                <p class="text-lg font-bold text-white">Increase in Staff Feedback</p>
-                <p class="text-gray-200 mt-3 text-sm">Drove data-driven improvements by increasing survey participation and capturing genuine feedback.</p>
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-dark/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-light-teal">Mansoor Ali Syed</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-gold transition-colors duration-300 nav-link">About</a>
+                <a href="#projects" class="hover:text-gold transition-colors duration-300 nav-link">Projects</a>
+                <a href="#skills" class="hover:text-gold transition-colors duration-300 nav-link">Skills</a>
+                <a href="#certifications" class="hover:text-gold transition-colors duration-300 nav-link">Certifications</a>
+                <a href="#contact" class="bg-orange text-dark font-bold px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300">Contact Me</a>
             </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-medium">
+            <a href="#about" class="block text-center py-3 hover:bg-teal">About</a>
+            <a href="#projects" class="block text-center py-3 hover:bg-teal">Projects</a>
+            <a href="#skills" class="block text-center py-3 hover:bg-teal">Skills</a>
+            <a href="#certifications" class="block text-center py-3 hover:bg-teal">Certifications</a>
+            <a href="#contact" class="block text-center py-3 hover:bg-teal">Contact</a>
+        </div>
+    </header>
 
-            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
-                <p class="text-5xl mb-2">📱</p>
-                <h2 class="text-xl font-bold text-white mb-2">Operational Efficiency App</h2>
-                <p class="text-4xl font-black" style="color: #E9D8A6;">100%</p>
-                <p class="text-lg font-bold text-white">Real-time Task Tracking</p>
-                <p class="text-gray-200 mt-3 text-sm">Streamlined workflows and boosted accountability with a custom-built, no-code application.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center bg-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4">
+                    <span class="text-light-teal">Leading Care</span> with 
+                    <span class="text-gold">Compassion & Code</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                    An aspiring Team Leader with 5+ years in UK care, an MBA, and a passion for leveraging technology to enhance operational efficiency and quality of care.
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="bg-teal text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-all duration-300">View My Work</a>
+                    <a href="#contact" class="bg-transparent border-2 border-gold text-gold font-bold py-3 px-8 rounded-lg text-lg hover:bg-gold hover:text-dark transition-all duration-300">Get In Touch</a>
+                </div>
             </div>
+        </section>
 
-            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
-                <p class="text-5xl mb-2">🌳</p>
-                <h2 class="text-xl font-bold text-white mb-2">Resident Well-being Project</h2>
-                <p class="text-4xl font-black" style="color: #E9D8A6;">30+</p>
-                <p class="text-lg font-bold text-white">Residents Enjoying New Patio</p>
-                <p class="text-gray-200 mt-3 text-sm">Managed a project to redesign the patio, directly improving resident quality of life and social engagement.</p>
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-medium">
+            <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <div class="bg-dark p-2 rounded-xl shadow-2xl">
+                        <img src="https://i.postimg.cc/JhFC7MQG/1727804609407.jpg" alt="Mansoor Ali Syed" class="rounded-lg w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x500/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-4xl font-bold mb-4 text-light-teal">About Me</h2>
+                    <p class="mb-4">
+                        I am a dedicated and forward-thinking care professional with a unique blend of hands-on experience and strategic business acumen. My journey began in direct care, where I developed a deep empathy for residents and a firsthand understanding of the operational challenges within care homes. This experience fueled my desire to find better, more efficient ways to work.
+                    </p>
+                    <p class="mb-4">
+                        Pursuing an MBA allowed me to build on this foundation, equipping me with skills in strategic planning, data analysis, and process improvement. I am passionate about digital transformation and believe that technology, when implemented thoughtfully, can empower caregivers, improve resident outcomes, and ensure robust compliance.
+                    </p>
+                    <p>
+                        My goal is to step into a leadership role where I can bridge the gap between traditional care practices and modern technological solutions, fostering a culture of innovation and continuous improvement.
+                    </p>
+                </div>
             </div>
-            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-2xl shadow-2xl p-8" style="background-color:#005F73;">
-                <h2 class="text-3xl font-bold text-white text-center mb-8">Case Study: From Problem to Solution</h2>
-                <p class="text-gray-200 text-center max-w-4xl mx-auto mb-10">This process of identifying a bottleneck and engineering a modern solution is a hallmark of Mansoor's approach. The task allocation app serves as a prime example of this methodology in action.</p>
-                <div class="flex flex-col md:flex-row justify-between items-center text-center text-white">
-                    <div class="w-full md:w-1/4">
-                        <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
-                             <p class="text-5xl mb-2">📄</p>
-                             <h3 class="font-bold text-lg" style="color:#94D2BD;">The Problem</h3>
-                             <p class="text-sm text-gray-200">Inefficient, paper-based task delegation led to poor accountability and no real-time progress tracking.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Key Projects & Initiatives</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Project Card 1 -->
+                    <div class="bg-medium rounded-xl shadow-2xl overflow-hidden project-card">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gold mb-3">Digital Survey Transformation</h3>
+                            <p class="mb-4">Identified low engagement with paper-based staff surveys, which hindered management's ability to gather actionable feedback. The process was slow, and anonymity concerns led to a lack of genuine responses.</p>
+                            <div class="mb-4">
+                                <h4 class="font-bold text-light-teal mb-2">My Solution:</h4>
+                                <p>I spearheaded the transition to a digital survey system using Microsoft Forms. This involved designing the survey, ensuring anonymity, and creating a communication plan to encourage participation. I then analyzed the collected data to present key findings and recommendations to the management team.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange mb-2">Impact:</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">50% increase</span> in staff response rates.</li>
+                                    <li><span class="font-bold">99% genuine feedback</span> captured, leading to data-driven action plans.</li>
+                                    <li>Streamlined the feedback loop from weeks to days.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="flow-arrow my-4 md:my-0 transform md:rotate-0 rotate-90">➔</div>
-                    <div class="w-full md:w-1/4">
-                        <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
-                            <p class="text-5xl mb-2">💡</p>
-                            <h3 class="font-bold text-lg" style="color:#94D2BD;">The Innovation</h3>
-                            <p class="text-sm text-gray-200">Designed and built a user-friendly, no-code task allocation app using Glide.</p>
-                        </div>
-                    </div>
-                    <div class="flow-arrow my-4 md:my-0 transform md:rotate-0 rotate-90">➔</div>
-                    <div class="w-full md:w-1/4">
-                         <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
-                            <p class="text-5xl mb-2">📈</p>
-                            <h3 class="font-bold text-lg" style="color:#94D2BD;">The Result</h3>
-                            <p class="text-sm text-gray-200">Vastly improved staff accountability, streamlined workflows, and enabled real-time performance monitoring.</p>
+                    <!-- Project Card 2 -->
+                    <div class="bg-medium rounded-xl shadow-2xl overflow-hidden project-card">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gold mb-3">No-Code Task Allocation App</h3>
+                            <p class="mb-4">Daily task delegation was managed through paper lists and verbal instructions, leading to a lack of accountability, inconsistent completion of duties, and no real-time visibility for shift leaders.</p>
+                             <div class="mb-4">
+                                <h4 class="font-bold text-light-teal mb-2">My Solution:</h4>
+                                <p>Leveraging my interest in AI and process automation, I designed and built a no-code task allocation application using Glide. The app provided a simple, mobile-first interface for staff to view their assigned tasks and mark them as complete.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange mb-2">Impact:</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Significantly improved staff accountability and task tracking.</li>
+                                    <li>Provided management with real-time performance monitoring.</li>
+                                    <li>Eliminated paper processes, reducing administrative overhead.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="md:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-2xl p-8" style="background-color:#005F73;">
-                 <h2 class="text-3xl font-bold text-white text-center mb-8">Journey of Growth & Leadership</h2>
-                 <div class="relative pl-8 border-l-4" style="border-color: #0A9396;">
-                    <div class="mb-8 timeline-item">
-                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Master of Business Administration (MBA)</h3>
-                        <p class="text-gray-300">Anglia Ruskin University, UK (2020 – 2022)</p>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-medium">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Core Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Leadership & Strategy</h3>
+                        <ul class="space-y-2">
+                            <li>Team Leadership & Supervision</li>
+                            <li>Strategic & Business Analysis</li>
+                            <li>Process Improvement</li>
+                            <li>HR Policy & Safeguarding</li>
+                        </ul>
                     </div>
-                    <div class="mb-8 timeline-item">
-                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Care Assistant → Tech Team Member</h3>
-                        <p class="text-gray-300">Janes Care Homes, UK (June 2020 – Present)</p>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Care Management</h3>
+                        <ul class="space-y-2">
+                            <li>Personalised Care Planning</li>
+                            <li>Risk Assessment</li>
+                            <li>CQC Compliance</li>
+                            <li>Stakeholder Engagement</li>
+                        </ul>
                     </div>
-                    <div class="mb-8 timeline-item">
-                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Google Project Management: Professional Certificate</h3>
-                        <p class="text-gray-300">Includes training in Agile Project Management & Scrum (July 2025)</p>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Technical Proficiencies</h3>
+                        <ul class="space-y-2">
+                            <li>Microsoft 365 Suite (Advanced)</li>
+                            <li>CareControl Systems</li>
+                            <li>Glide (No-Code Development)</li>
+                            <li>AI Tools (Gemini, ChatGPT)</li>
+                        </ul>
                     </div>
-                    <div class="mb-8 timeline-item">
-                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Google AI Essentials & Leadership Training</h3>
-                        <p class="text-gray-300">Google Cloud & Open University (Completed June 2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 bg-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Certifications & Diplomas</h2>
+                <p class="text-center max-w-3xl mx-auto mb-12">Click on any certification to view the credential.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Certification Card -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Google Project Management</h3>
+                        <p class="text-sm">Professional Certificate</p>
+                    </a>
+                    <!-- Certification Card -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Agile & Scrum Training</h3>
+                        <p class="text-sm">Included in Google PM Certificate</p>
+                    </a>
+                    <!-- Certification Card -->
+                    <a href="https://drive.google.com/file/d/12MLQ3UOVISuHhF9XEPiquzI7yjJddtqc/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Google AI Essentials</h3>
+                        <p class="text-sm">Specialization Certificate</p>
+                    </a>
+                    <!-- Certification Card -->
+                    <a href="https://drive.google.com/file/d/1CBavMjtGBpOmnUzqEOu2OnZ7p4K-YwNd/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Approaching Leadership with Care</h3>
+                        <p class="text-sm">Statement of Participation</p>
+                    </a>
+                    <!-- Certification Card -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Master of Business Admin.</h3>
+                        <p class="text-sm">Anglia Ruskin University</p>
+                    </a>
+                    <!-- Certification Card -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">PRINCE2® Foundation</h3>
+                        <p class="text-sm">(Planned)</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-medium">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-4xl font-bold mb-4 text-light-teal">Let's Connect</h2>
+                <p class="mb-8">I am actively seeking a Team Leader role where I can contribute to a forward-thinking organization. If you're looking for a leader who can bridge the gap between care and technology, I'd love to hear from you.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8 text-lg">
+                    <a href="mailto:mansoorforpaltons191@gmail.com" class="hover:text-gold">mansoorforpaltons191@gmail.com</a>
+                    <span class="hidden md:inline text-gray-500">|</span>
+                    <a href="tel:07940256691" class="hover:text-gold">07940 256691</a>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/xvgrnqvg" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Your Name" class="form-input w-full p-3 rounded-lg" required>
+                        <input type="email" name="email" placeholder="Your Email" class="form-input w-full p-3 rounded-lg" required>
                     </div>
-                    <div class="mb-8 timeline-item">
-                        <h3 class="text-xl font-bold" style="color:#94D2BD;">PRINCE2® Foundation Certification</h3>
-                        <p cla
+                    <textarea name="message" placeholder="Your Message" rows="5" class="form-input w-full p-3 rounded-lg" required></textarea>
+                    <button type="submit" class="bg-orange text-dark font-bold py-3 px-12 rounded-lg text-lg hover:bg-opacity-90 transition-all duration-300">Send Message</button>
+                </form>
+                <div id="form-feedback" class="mt-6 text-lg"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Mansoor Ali Syed. All rights reserved.</p>
+            <p>Designed with passion in Luton, UK.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (const link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        });
+
+        // Contact Form Submission with Formspree
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const data = new FormData(form);
+            
+            formFeedback.textContent = 'Sending...';
+            formFeedback.style.color = 'var(--accent-gold)';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formFeedback.textContent = 'Thank you for your message! I will get back to you shortly.';
+                    formFeedback.style.color = 'var(--accent-light-teal)';
+                    form.reset();
+                } else {
+                    const responseData = await response.json();
+                    if (responseData.errors) {
+                        formFeedback.textContent = responseData.errors.map(error => error.message).join(', ');
+                    } else {
+                        formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                    }
+                    formFeedback.style.color = 'var(--accent-orange)';
+                }
+            } catch (error) {
+                formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                formFeedback.style.color = 'var(--accent-orange)';
+            }
+
+            // Clear feedback message after 5 seconds
+            setTimeout(() => {
+                formFeedback.textContent = '';
+            }, 5000);
+        });
+
+    </script>
+
+</body>
+</html>
