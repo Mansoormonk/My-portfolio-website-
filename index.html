@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === SEO & SOCIAL SHARING TAGS (REVISION 3) === -->
+    <title>Mansoor Ali Syed - The Modern Care Leader</title>
+    <meta name="description" content="An interactive infographic showcasing the skills and key achievements of Mansoor Ali Syed, a modern care leader fusing compassionate care with technology.">
+    
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mansoor Ali Syed - The Modern Care Leader">
+    <meta property="og:description" content="An interactive infographic showcasing the skills and key achievements of Mansoor Ali Syed, a modern care leader fusing compassionate care with technology.">
+    <meta property="og:image" content="https://placehold.co/1200x630/005F73/94D2BD?text=Mansoor+Ali+Syed\nModern+Care+Leader">
+    <!-- Note: For a real preview image, take a screenshot of the infographic, upload it, and replace the placehold.co link above. -->
+
+    <!-- === END REVISION === -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0A9396;
+            border: 3px solid #E9D8A6;
+        }
+        .flow-arrow {
+            color: #0A9396;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .chat-bubble-user {
+            background-color: #E9D8A6;
+            color: #001219;
+        }
+        .chat-bubble-ai {
+            background-color: #0A9396;
+            color: #FFFFFF;
+        }
+        .loading-dots div {
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .loading-dots .dot1 { animation-delay: -0.32s; }
+        .loading-dots .dot2 { animation-delay: -0.16s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="background-color: #001219;">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white" style="color: #94D2BD;">Mansoor Ali Syed</h1>
+            <p class="text-xl md:text-2xl font-bold mt-2" style="color: #0A9396;">The Modern Care Leader</p>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mt-4">Fusing 5+ years of compassionate care with an MBA and a passion for technology to drive efficiency, engagement, and CQC compliance in UK care homes.</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
+                <p class="text-5xl mb-2">📊</p>
+                <h2 class="text-xl font-bold text-white mb-2">Digital Survey Rollout</h2>
+                <p class="text-4xl font-black" style="color: #E9D8A6;">+50%</p>
+                <p class="text-lg font-bold text-white">Increase in Staff Feedback</p>
+                <p class="text-gray-200 mt-3 text-sm">Drove data-driven improvements by increasing survey participation and capturing genuine feedback.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
+                <p class="text-5xl mb-2">📱</p>
+                <h2 class="text-xl font-bold text-white mb-2">Operational Efficiency App</h2>
+                <p class="text-4xl font-black" style="color: #E9D8A6;">100%</p>
+                <p class="text-lg font-bold text-white">Real-time Task Tracking</p>
+                <p class="text-gray-200 mt-3 text-sm">Streamlined workflows and boosted accountability with a custom-built, no-code application.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col text-center" style="background-color:#005F73;">
+                <p class="text-5xl mb-2">🌳</p>
+                <h2 class="text-xl font-bold text-white mb-2">Resident Well-being Project</h2>
+                <p class="text-4xl font-black" style="color: #E9D8A6;">30+</p>
+                <p class="text-lg font-bold text-white">Residents Enjoying New Patio</p>
+                <p class="text-gray-200 mt-3 text-sm">Managed a project to redesign the patio, directly improving resident quality of life and social engagement.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-2xl shadow-2xl p-8" style="background-color:#005F73;">
+                <h2 class="text-3xl font-bold text-white text-center mb-8">Case Study: From Problem to Solution</h2>
+                <p class="text-gray-200 text-center max-w-4xl mx-auto mb-10">This process of identifying a bottleneck and engineering a modern solution is a hallmark of Mansoor's approach. The task allocation app serves as a prime example of this methodology in action.</p>
+                <div class="flex flex-col md:flex-row justify-between items-center text-center text-white">
+                    <div class="w-full md:w-1/4">
+                        <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
+                             <p class="text-5xl mb-2">📄</p>
+                             <h3 class="font-bold text-lg" style="color:#94D2BD;">The Problem</h3>
+                             <p class="text-sm text-gray-200">Inefficient, paper-based task delegation led to poor accountability and no real-time progress tracking.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow my-4 md:my-0 transform md:rotate-0 rotate-90">➔</div>
+                    <div class="w-full md:w-1/4">
+                        <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
+                            <p class="text-5xl mb-2">💡</p>
+                            <h3 class="font-bold text-lg" style="color:#94D2BD;">The Innovation</h3>
+                            <p class="text-sm text-gray-200">Designed and built a user-friendly, no-code task allocation app using Glide.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow my-4 md:my-0 transform md:rotate-0 rotate-90">➔</div>
+                    <div class="w-full md:w-1/4">
+                         <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #0A9396;">
+                            <p class="text-5xl mb-2">📈</p>
+                            <h3 class="font-bold text-lg" style="color:#94D2BD;">The Result</h3>
+                            <p class="text-sm text-gray-200">Vastly improved staff accountability, streamlined workflows, and enabled real-time performance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-2xl p-8" style="background-color:#005F73;">
+                 <h2 class="text-3xl font-bold text-white text-center mb-8">Journey of Growth & Leadership</h2>
+                 <div class="relative pl-8 border-l-4" style="border-color: #0A9396;">
+                    <div class="mb-8 timeline-item">
+                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Master of Business Administration (MBA)</h3>
+                        <p class="text-gray-300">Anglia Ruskin University, UK (2020 – 2022)</p>
+                    </div>
+                    <div class="mb-8 timeline-item">
+                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Care Assistant → Tech Team Member</h3>
+                        <p class="text-gray-300">Janes Care Homes, UK (June 2020 – Present)</p>
+                    </div>
+                    <div class="mb-8 timeline-item">
+                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Google Project Management: Professional Certificate</h3>
+                        <p class="text-gray-300">Includes training in Agile Project Management & Scrum (July 2025)</p>
+                    </div>
+                    <div class="mb-8 timeline-item">
+                        <h3 class="text-xl font-bold" style="color:#94D2BD;">Google AI Essentials & Leadership Training</h3>
+                        <p class="text-gray-300">Google Cloud & Open University (Completed June 2025)</p>
+                    </div>
+                    <div class="mb-8 timeline-item">
+                        <h3 class="text-xl font-bold" style="color:#94D2BD;">PRINCE2® Foundation Certification</h3>
+                        <p cla
