@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansoor Ali Syed | Care Leader & Tech Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #001219;
+            color: #E0E0E0;
+        }
+        /* Color Variables */
+        :root {
+            --bg-dark: #001219;
+            --bg-medium: #005F73;
+            --accent-teal: #0A9396;
+            --accent-light-teal: #94D2BD;
+            --accent-gold: #E9D8A6;
+            --accent-orange: #EE9B00;
+        }
+        .bg-dark { background-color: var(--bg-dark); }
+        .bg-medium { background-color: var(--bg-medium); }
+        .text-light-teal { color: var(--accent-light-teal); }
+        .text-gold { color: var(--accent-gold); }
+        .text-orange { color: var(--accent-orange); }
+        .border-teal { border-color: var(--accent-teal); }
+        .bg-teal { background-color: var(--accent-teal); }
+        .bg-orange { background-color: var(--accent-orange); }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Active Nav Link Styling */
+        .nav-link-active {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+        
+        /* Project Card Hover Effect */
+        .project-card, .cert-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .project-card:hover, .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Styling */
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent-teal);
+            color: #FFFFFF;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+        .form-input::placeholder {
+            color: rgba(224, 224, 224, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header" class="bg-dark/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-light-teal">Mansoor Ali Syed</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-gold transition-colors duration-300 nav-link">About</a>
+                <a href="#projects" class="hover:text-gold transition-colors duration-300 nav-link">Projects</a>
+                <a href="#skills" class="hover:text-gold transition-colors duration-300 nav-link">Skills</a>
+                <a href="#certifications" class="hover:text-gold transition-colors duration-300 nav-link">Certifications</a>
+                <a href="#contact" class="bg-orange text-dark font-bold px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300">Contact Me</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-medium">
+            <a href="#about" class="block text-center py-3 hover:bg-teal">About</a>
+            <a href="#projects" class="block text-center py-3 hover:bg-teal">Projects</a>
+            <a href="#skills" class="block text-center py-3 hover:bg-teal">Skills</a>
+            <a href="#certifications" class="block text-center py-3 hover:bg-teal">Certifications</a>
+            <a href="#contact" class="block text-center py-3 hover:bg-teal">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="min-h-screen flex items-center bg-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4">
+                    <span class="text-light-teal">Leading Care</span> with 
+                    <span class="text-gold">Compassion & Code</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                    An aspiring Team Leader with 5+ years in UK care, an MBA, and a passion for leveraging technology to enhance operational efficiency and quality of care.
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="bg-teal text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-all duration-300">View My Work</a>
+                    <a href="#contact" class="bg-transparent border-2 border-gold text-gold font-bold py-3 px-8 rounded-lg text-lg hover:bg-gold hover:text-dark transition-all duration-300">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-medium">
+            <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <div class="bg-dark p-2 rounded-xl shadow-2xl">
+                        <img src="https://i.postimg.cc/JhFC7MQG/1727804609407.jpg" alt="Mansoor Ali Syed" class="rounded-lg w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x500/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-4xl font-bold mb-4 text-light-teal">About Me</h2>
+                    <p class="mb-4">
+                        I am a dedicated and forward-thinking care professional with a unique blend of hands-on experience and strategic business acumen. My journey began in direct care, where I developed a deep empathy for residents and a firsthand understanding of the operational challenges within care homes. This experience fueled my desire to find better, more efficient ways to work.
+                    </p>
+                    <p class="mb-4">
+                        Pursuing an MBA allowed me to build on this foundation, equipping me with skills in strategic planning, data analysis, and process improvement. I am passionate about digital transformation and believe that technology, when implemented thoughtfully, can empower caregivers, improve resident outcomes, and ensure robust compliance.
+                    </p>
+                    <p>
+                        My goal is to step into a leadership role where I can bridge the gap between traditional care practices and modern technological solutions, fostering a culture of innovation and continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Key Projects & Initiatives</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-medium rounded-xl shadow-2xl overflow-hidden project-card">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gold mb-3">Digital Survey Transformation</h3>
+                            <p class="mb-4">Identified low engagement with paper-based staff surveys, which hindered management's ability to gather actionable feedback. The process was slow, and anonymity concerns led to a lack of genuine responses.</p>
+                            <div class="mb-4">
+                                <h4 class="font-bold text-light-teal mb-2">My Solution:</h4>
+                                <p>I spearheaded the transition to a digital survey system using Microsoft Forms. This involved designing the survey, ensuring anonymity, and creating a communication plan to encourage participation. I then analyzed the collected data to present key findings and recommendations to the management team.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange mb-2">Impact:</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">50% increase</span> in staff response rates.</li>
+                                    <li><span class="font-bold">99% genuine feedback</span> captured, leading to data-driven action plans.</li>
+                                    <li>Streamlined the feedback loop from weeks to days.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-medium rounded-xl shadow-2xl overflow-hidden project-card">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gold mb-3">No-Code Task Allocation App</h3>
+                            <p class="mb-4">Daily task delegation was managed through paper lists and verbal instructions, leading to a lack of accountability, inconsistent completion of duties, and no real-time visibility for shift leaders.</p>
+                             <div class="mb-4">
+                                <h4 class="font-bold text-light-teal mb-2">My Solution:</h4>
+                                <p>Leveraging my interest in AI and process automation, I designed and built a no-code task allocation application using Glide. The app provided a simple, mobile-first interface for staff to view their assigned tasks and mark them as complete.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange mb-2">Impact:</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Significantly improved staff accountability and task tracking.</li>
+                                    <li>Provided management with real-time performance monitoring.</li>
+                                    <li>Eliminated paper processes, reducing administrative overhead.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-medium">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Core Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Leadership & Strategy</h3>
+                        <ul class="space-y-2">
+                            <li>Team Leadership & Supervision</li>
+                            <li>Strategic & Business Analysis</li>
+                            <li>Process Improvement</li>
+                            <li>HR Policy & Safeguarding</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Care Management</h3>
+                        <ul class="space-y-2">
+                            <li>Personalised Care Planning</li>
+                            <li>Risk Assessment</li>
+                            <li>CQC Compliance</li>
+                            <li>Stakeholder Engagement</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Technical Proficiencies</h3>
+                        <ul class="space-y-2">
+                            <li>Microsoft 365 Suite (Advanced)</li>
+                            <li>CareControl Systems</li>
+                            <li>Glide (No-Code Development)</li>
+                            <li>AI Tools (Gemini, ChatGPT)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-20 bg-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-teal">Certifications & Diplomas</h2>
+                <p class="text-center max-w-3xl mx-auto mb-12">Click on any certification to view the credential.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="https://coursera.org/share/694289366deca0d807779a8a5c73987d" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Google Project Management</h3>
+                        <p class="text-sm">Professional Certificate</p>
+                    </a>
+                    <a href="https://coursera.org/share/694289366deca0d807779a8a5c73987d" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Agile & Scrum Training</h3>
+                        <p class="text-sm">Included in Google PM Certificate</p>
+                    </a>
+                    <a href="https://drive.google.com/file/d/12MLQ3UOVISuHhF9XEPiquzI7yjJddtqc/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Google AI Essentials</h3>
+                        <p class="text-sm">Specialization Certificate</p>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1CBavMjtGBpOmnUzqEOu2OnZ7p4K-YwNd/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Approaching Leadership with Care</h3>
+                        <p class="text-sm">Statement of Participation</p>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1BZL20iRSkNO7tmA-tjbgMFsMLBsCTPx0/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">Master of Business Admin.</h3>
+                        <p class="text-sm">Anglia Ruskin University</p>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="block bg-medium p-6 rounded-lg cert-card text-center">
+                        <h3 class="text-xl font-bold text-gold">PRINCE2® Foundation</h3>
+                        <p class="text-sm">(Planned)</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-medium">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-4xl font-bold mb-4 text-light-teal">Let's Connect</h2>
+                <p class="mb-8">I am actively seeking a Team Leader role where I can contribute to a forward-thinking organization. If you're looking for a leader who can bridge the gap between care and technology, I'd love to hear from you.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8 text-lg">
+                    <a href="mailto:mansoorforpaltons1913@gmail.com" class="hover:text-gold">mansoorforpaltons1913@gmail.com</a>
+                    <span class="hidden md:inline text-gray-500">|</span>
+                    <a href="tel:07940256691" class="hover:text-gold">07940 256691</a>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/xvgrnqvg" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Your Name" class="form-input w-full p-3 rounded-lg" required>
+                        <input type="email" name="email" placeholder="Your Email" class="form-input w-full p-3 rounded-lg" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" rows="5" class="form-input w-full p-3 rounded-lg" required></textarea>
+                    <button type="submit" class="bg-orange text-dark font-bold py-3 px-12 rounded-lg text-lg hover:bg-opacity-90 transition-all duration-300">Send Message</button>
+                </form>
+                <div id="form-feedback" class="mt-6 text-lg"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Mansoor Ali Syed. All rights reserved.</p>
+            <p>Designed with passion in Luton, UK.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (const link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        });
+
+        // Contact Form Submission with Formspree
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const data = new FormData(form);
+            
+            formFeedback.textContent = 'Sending...';
+            formFeedback.style.color = 'var(--accent-gold)';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formFeedback.textContent = 'Thank you for your message! I will get back to you shortly.';
+                    formFeedback.style.color = 'var(--accent-light-teal)';
+                    form.reset();
+                } else {
+                    const responseData = await response.json();
+                    if (responseData.errors) {
+                        formFeedback.textContent = responseData.errors.map(error => error.message).join(', ');
+                    } else {
+                        formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                    }
+                    formFeedback.style.color = 'var(--accent-orange)';
+                }
+            } catch (error) {
+                formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                formFeedback.style.color = 'var(--accent-orange)';
+            }
+
+            // Clear feedback message after 5 seconds
+            setTimeout(() => {
+                formFeedback.textContent = '';
+            }, 5000);
+        });
+
+    </script>
+
+</body>
+</html>
